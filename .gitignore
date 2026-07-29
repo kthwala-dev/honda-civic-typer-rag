@@ -5,3 +5,6 @@ venv/
 .env
 *.egg-info/
 .DS_Store
+data/manual.pdf
+data/manual_text.json
+data/chroma_db/
