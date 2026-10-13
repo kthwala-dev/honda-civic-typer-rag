@@ -1,3 +1,4 @@
+from clean import clean
 from pathlib import Path
 import json
 from pypdf import PdfReader
@@ -11,7 +12,7 @@ def extract_pages(pdf_path: Path) -> list[dict]:
     pages = []
     for i, page in enumerate(reader.pages):
         text = page.extract_text() or ""
-        pages.append({"page_number": i + 1, "text": text.strip()})
+        pages.append({"page_number": i + 1, "text": clean(text)})
     return pages
 
 

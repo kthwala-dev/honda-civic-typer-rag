@@ -4,7 +4,7 @@ A retrieval-augmented generation (RAG) system that answers questions about a Hon
 
 ## Status
 
-Working end-to-end pipeline. Retrieval accuracy tuning and a command-line interface are in progress.
+Working end-to-end pipeline with a measured retrieval score of 15/16 and a command-line search tool.
 
 ## What it does
 
@@ -19,7 +19,6 @@ Given a natural-language question such as "What is the recommended tyre pressure
 
 ## Generation options
 
-- src/query.py uses the Anthropic Claude API. It needs an API key in a .env file and billing set up on the Anthropic console.
 - src/query_local_llm.py is a free alternative using an open-source model (Qwen2.5-3B-Instruct) on Google Colab's free T4 GPU. No API key and no local install needed.
 
 ## Stack
@@ -43,7 +42,7 @@ Given a natural-language question such as "What is the recommended tyre pressure
     python src/extract.py
     python src/chunk.py
     python src/embed.py
-    python src/query.py
+    python src/ask.py
 
 For the free version, upload data/manual_chunks.json to a Google Colab notebook with a T4 GPU runtime and follow src/query_local_llm.py.
 
@@ -53,9 +52,9 @@ For the free version, upload data/manual_chunks.json to a Google Colab notebook 
 - [x] Chunk and embed the manual content
 - [x] Retrieval and generation pipeline
 - [x] Free local-LLM alternative
-- [ ] Measure and improve retrieval accuracy
-- [ ] Command-line interface
-- [ ] Tests
+- [x] Measure and improve retrieval accuracy
+- [x] Command-line search interface
+- [x] Retrieval evaluation set
 
 ## Author
 
