@@ -8,3 +8,4 @@ venv/
 data/manual.pdf
 data/manual_text.json
 data/chroma_db/
+data/manual_chunks.json
